@@ -7,7 +7,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <div class="container mt-4">
-<h1>Generate Url System</h1>
+<h1>Generate Url System(<?php echo count($urls);?>)</h1>
 
     <div class="d-flex justify-content-end">
         <a href="<?php echo base_url('/url/create');?>" class="btn btn-primary">Add Url</a>
@@ -18,9 +18,9 @@
        <thead>
           <tr>
              <th>Id</th>
-             <th>Long Url</th>
+             <th>Url</th>
              <th>Short Code</th>
-             <th>Modify Url</th>
+             <th>New Url</th>
              <th>QR Code</th>
              <th>Hits</th>
              <th>Edit</th>
