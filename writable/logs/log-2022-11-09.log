@@ -1,0 +1,81 @@
+ERROR - 2022-11-09 04:47:27 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\MyProjects\LearnDev\test\learnCi4\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\MyProjects\LearnDev\test\learnCi4\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'codeigniter4_db', 3306, '', 0)
+#1 D:\MyProjects\LearnDev\test\learnCi4\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\MyProjects\LearnDev\test\learnCi4\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\MyProjects\LearnDev\test\learnCi4\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\MyProjects\LearnDev\test\learnCi4\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\MyProjects\LearnDev\test\learnCi4\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\MyProjects\LearnDev\test\learnCi4\app\Models\GenerateShortUrlModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 D:\MyProjects\LearnDev\test\learnCi4\app\Controllers\Home.php(20): App\Models\GenerateShortUrlModel->getAll()
+#8 D:\MyProjects\LearnDev\test\learnCi4\app\Controllers\Home.php(12): App\Controllers\Home->getAllUrl()
+#9 D:\MyProjects\LearnDev\test\learnCi4\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#10 D:\MyProjects\LearnDev\test\learnCi4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 D:\MyProjects\LearnDev\test\learnCi4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\MyProjects\LearnDev\test\learnCi4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\MyProjects\LearnDev\test\learnCi4\system\Commands\Server\rewrite.php(46): require_once('D:\\MyProjects\\L...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\MyProjects\LearnDev\test\learnCi4\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\MyProjects\LearnDev\test\learnCi4\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\MyProjects\LearnDev\test\learnCi4\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\MyProjects\LearnDev\test\learnCi4\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\MyProjects\LearnDev\test\learnCi4\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\MyProjects\LearnDev\test\learnCi4\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\MyProjects\LearnDev\test\learnCi4\app\Models\GenerateShortUrlModel.php(49): CodeIgniter\BaseModel->findAll()
+#6 D:\MyProjects\LearnDev\test\learnCi4\app\Controllers\Home.php(20): App\Models\GenerateShortUrlModel->getAll()
+#7 D:\MyProjects\LearnDev\test\learnCi4\app\Controllers\Home.php(12): App\Controllers\Home->getAllUrl()
+#8 D:\MyProjects\LearnDev\test\learnCi4\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\MyProjects\LearnDev\test\learnCi4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\MyProjects\LearnDev\test\learnCi4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\MyProjects\LearnDev\test\learnCi4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\MyProjects\LearnDev\test\learnCi4\system\Commands\Server\rewrite.php(46): require_once('D:\\MyProjects\\L...')
+#13 {main}
+CRITICAL - 2022-11-09 04:47:27 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `short_urls`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\GenerateShortUrlModel.php(49): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(20): App\Models\GenerateShortUrlModel->getAll()
+ 7 APPPATH\Controllers\Home.php(12): App\Controllers\Home->getAllUrl()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-09 22:35:51 --> Array to string conversion
+in APPPATH\Views\url_edit.php on line 18.
+ 1 APPPATH\Views\url_edit.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\url_edit.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\url_edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('url_edit', [], true)
+ 5 APPPATH\Controllers\Home.php(34): view('url_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->showEditUrl('45')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-09 22:42:39 --> Allowed fields must be specified for model: App\Models\GenerateShortUrlModel
+in SYSTEMPATH\BaseModel.php on line 1160.
+ 1 SYSTEMPATH\BaseModel.php(1160): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\GenerateShortUrlModel')
+ 2 SYSTEMPATH\BaseModel.php(862): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 4 APPPATH\Controllers\GenerateShortUrl.php(89): CodeIgniter\Model->update('45', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GenerateShortUrl->edit()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GenerateShortUrl))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-09 22:48:27 --> Unsupported operand types: string - int
+in APPPATH\Controllers\GenerateShortUrl.php on line 107.
+ 1 APPPATH\Controllers\GenerateShortUrl.php(82): App\Controllers\GenerateShortUrl->generateRandomString('https://mynovel.co')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\GenerateShortUrl->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GenerateShortUrl))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
