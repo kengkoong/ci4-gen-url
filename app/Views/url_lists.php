@@ -23,6 +23,7 @@
              <th>New Url</th>
              <th>QR Code</th>
              <th>Hits</th>
+             <th>Date</th>
              <th>Edit</th>
              <th>Delete</th>
           </tr>
@@ -37,6 +38,7 @@
              <td><a href=<?php echo base_url('url/redirect/'.$url['short_code']);?> target="_blank"> <?php echo base_url("?c=".$url['short_code'])?></a></td>
              <td><a href=<?php echo base_url('url/qrcode/'.$url['short_code']);?> target="_blank"> View QR Code </a></td>
              <td><?php echo $url['hits']; ?></td>
+             <td><?php echo $url['created']; ?></td>
              <td><a href=<?php echo base_url('url/edit/'.$url['id']);?> class="btn btn-warning" > Edit</a></td>
              <td><a href=<?php echo base_url('/url/delete/'.$url['id']);?> class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this')"> Del</a></td>
          
