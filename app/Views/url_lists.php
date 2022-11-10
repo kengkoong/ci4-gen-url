@@ -3,14 +3,14 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Codeigniter Crud</title>
+  <title>Generate Url System</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <div class="container mt-4">
-<h1>Codeigniter Crud</h1>
+<h1>Generate Url System</h1>
 
     <div class="d-flex justify-content-end">
-        <a href="/url/create" class="btn btn-primary">Add Url</a>
+        <a href="<?php echo base_url('/url/create');?>" class="btn btn-primary">Add Url</a>
 	</div>
 
   <div class="mt-3">
@@ -35,10 +35,10 @@
              <td><?php echo $url['long_url']; ?></td>
              <td><?php echo $url['short_code']; ?></td>
              <td><a href=<?php echo base_url('url/redirect/'.$url['short_code']);?> target="_blank"> <?php echo base_url("?c=".$url['short_code'])?></a></td>
-             <td><a href=<?php echo base_url('url/qrcode/'.$url['short_code']);?> target="_blank"> คลิกเพื่อดู QR Code</a></td>
+             <td><a href=<?php echo base_url('url/qrcode/'.$url['short_code']);?> target="_blank"> View QR Code </a></td>
              <td><?php echo $url['hits']; ?></td>
-             <td><a href=<?php echo base_url('url/edit/'.$url['id']);?> class="btn btn-warning" > แก้ไข</a></td>
-             <td><a href=<?php echo base_url('/url/delete/'.$url['id']);?> class="btn btn-danger"> ลบ</a></td>
+             <td><a href=<?php echo base_url('url/edit/'.$url['id']);?> class="btn btn-warning" > Edit</a></td>
+             <td><a href=<?php echo base_url('/url/delete/'.$url['id']);?> class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this')"> Del</a></td>
          
           </tr>
          <?php endforeach; ?>
