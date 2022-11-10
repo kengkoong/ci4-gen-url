@@ -15,5 +15,10 @@
    username => root    ** ตาม config การติดตั้ง Database
    password =>         ** ตาม config การติดตั้ง Database
    database =>codeigniter4_db
+
 5. เปิดโปรแกรม Xampp ที่ติดตั้งไว้ จากนั้นคลิกปุ่ม Start Apache และ MySQL
-6. เปิดโปรแกรม Web Browser ขึ้นมาโดยพิมพ์ url ที่ url address เป็น localhost:8081  จากนั้นจะปรากฏหน้าตาระบบ
+6. import database ที่แนบไปกับ Project โดยมีวิธีการดังต่อไปนี้ ที่
+    6.1 พิมพ์ localhost/phpmyadmin บน url address ใน Browser
+    6.2 สร้าง Database ขึ้นมาเพื่อรองรับข้อมูลที่จะทำการ import เข้าไป
+    6.3 คลิกที่เมนู import ด้านบน จากนั้นเลือกไฟล์ฐานข้อมูลที่แนบไป ชื่อ codeignier4_db.sql และทำการคลิกปุ่ม go เพื่อทำการ import
+7. เปิดโปรแกรม Web Browser ขึ้นมาโดยพิมพ์ url ที่ url address เป็น localhost:8081  จากนั้นจะปรากฏหน้าตาระบบ
